@@ -1,0 +1,1 @@
+100.times{|n| puts n+1}
