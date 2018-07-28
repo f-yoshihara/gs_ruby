@@ -1,0 +1,1 @@
+SELECT * FROM users WHERE gender = 'M' ORDER BY age DESC;
