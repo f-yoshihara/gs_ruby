@@ -2,24 +2,22 @@ require './common'
 
 url = 'https://gsacademy.tokyo/'
 
-charset = nil
-html = open(url) do |f|
-    charset = f.charset
-    f.read
+def open_html(url)
+  charset = nil
+  html = open(url) do |f|
+      charset = f.charset
+      f.read
+  end
+  Nokogiri::HTML.parse(html, nil, charset)
 end
 
-doc = Nokogiri::HTML.parse(html, nil, charset)
+doc = open_html(url)
 
 doc.css("a").each do |link|
-  link_news_md = link[:href].match(/https:\/\/gsacademy.tokyo\/news.+$/)
-  if link_news_md
-    link_news = link_news_md.to_s
-    charset_news = nil
-    html_news = open(link_news) do |f|
-      charset_news = f.charset
-      f.read
-    end
-    doc_news = Nokogiri::HTML.parse(html_news, nil, charset_news)
+  url_news_md = link[:href].match(/https:\/\/gsacademy.tokyo\/news.+$/)
+  if url_news_md
+    url_news = url_news_md.to_s
+    doc_news = open_html(url_news)
     doc_news.xpath("//div[@class='row']/p[1]").each do |node|
       p node.text
     end
