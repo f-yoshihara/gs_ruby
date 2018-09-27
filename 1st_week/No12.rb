@@ -14,7 +14,7 @@ end
 doc = open_html(url)
 
 doc.css("a").each do |link|
-  url_news_md = link[:href].match(/https:\/\/gsacademy.tokyo\/news.+$/)
+  url_news_md = link[:href].match(/https:\/\/gsacademy\.tokyo\/news.+$/)
   if url_news_md
     url_news = url_news_md.to_s
     doc_news = open_html(url_news)

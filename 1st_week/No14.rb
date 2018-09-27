@@ -4,7 +4,6 @@ require 'active_record'
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 # usersというテーブルを扱うUserというモデルにActiveRecord::Baseを継承
-# これによりHeadlineにモデルとしての能力が与えられる
 # 接続とテーブル作成の段階では使わない
 class User < ActiveRecord::Base
 end
@@ -20,9 +19,16 @@ ActiveRecord::Base.establish_connection(
 
 # ActiveRecord::Migrationから継承。カラム指定。
 # 引数の二つ目はデータ型
-class CreateUsers < ActiveRecord::Migration[5.0]
-    create_table :users do |t|
-        t.column :gender, :string
-        t.column :age,    :integer
-    end
-end
+# class CreateUsers < ActiveRecord::Migration[5.0]
+#     create_table :users do |t|
+#         t.column :gender, :string
+#         t.column :age,    :integer
+#     end
+# end
+
+# class CreateName < ActiveRecord::Migration[5.0]
+#     create_table :names do |t|
+#         t.column :first_name, :string
+#         t.column :last_name,  :string
+#     end
+# end

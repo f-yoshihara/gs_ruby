@@ -1,3 +1,5 @@
+# http://totutotu.hatenablog.com/entry/2015/05/27/Sinatra%2BMySQL%2BActiveRecord%E3%81%A7Database%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%82%92%E8%A1%8C%E3%81%86
+
 require 'sinatra'
 require 'sinatra/reloader'
 require './common'
@@ -19,6 +21,8 @@ end
 get '/register' do
   erb :register
 end
+
+# https://qiita.com/ms2sato/items/901d8c5ca77c1133522c
 
 post '/save' do
   user = User.new

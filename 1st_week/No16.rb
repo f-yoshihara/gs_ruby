@@ -1,1 +1,0 @@
-# mysql> SELECT * FROM users ORDER BY age DESC;

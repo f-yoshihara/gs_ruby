@@ -1,0 +1,15 @@
+current directory: /Users/fumiro_yoshihara/Desktop/rails/1st_week/.bundle/ruby/2.5.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+/Users/fumiro_yoshihara/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180801-47224-ste9sl.rb extconf.rb
+creating Makefile
+
+current directory: /Users/fumiro_yoshihara/Desktop/rails/1st_week/.bundle/ruby/2.5.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/fumiro_yoshihara/Desktop/rails/1st_week/.bundle/ruby/2.5.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/fumiro_yoshihara/Desktop/rails/1st_week/.bundle/ruby/2.5.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20180801-47224-28i8gx

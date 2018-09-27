@@ -1,5 +1,12 @@
+# http://sinatrarb.com/intro-ja.html
+# https://qiita.com/k-ta-yamada/items/9e35c5f8b31862267e01
+# ↑参考になるけど間違いも多いので注意！
+
+# http://localhost:4567/
+
 require 'sinatra'
 require 'sinatra/reloader'
+require './common'
 
 get '/' do
   erb :index
@@ -13,6 +20,19 @@ end
 get '/hello_get' do
   @name = params[:name]
   erb :hello
+end
+
+get '/register' do
+  erb :register
+end
+
+post '/save' do
+  user = User.new
+  user.name      = params[:name]
+  user.gender    = params[:gender]
+  user.pref_name = params[:pref_name]
+  user.save
+  erb :save
 end
 
 # post ''

@@ -5,6 +5,10 @@ source "https://rubygems.org"
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
-gem 'nokogiri'
-gem 'activerecord'
-gem 'mysql2'
+# gem 'nokogiri'
+# gem 'activerecord'
+# gem 'mysql2'
+# gem 'sinatra'
+# gem 'sinatra-contrib'
+# gem 'redcarpet'
+gem 'yard', '~> 0.9.16'
